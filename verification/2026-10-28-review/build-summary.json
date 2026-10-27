@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-28",
+  "idf_version": "6.0.1",
+  "target": "esp32s3",
+  "full_build": {
+    "passed": true,
+    "configuration": "Copy of existing configuration with example credentials masked; local header enabled",
+    "image_size_bytes": 1066608
+  },
+  "fresh_build": {
+    "passed": true,
+    "configuration": "New sdkconfig generated from committed defaults; SVC_USE_PLACEHOLDERS=1; unused protocol_examples_common dependency removed",
+    "image_size_bytes": 1066848,
+    "app_partition_bytes": 2031616
+  },
+  "checks": {
+    "encoder-tests.json": {
+      "passed": 14,
+      "failed": 0
+    },
+    "tests.json": {
+      "passed": 14,
+      "failed": 0
+    },
+    "camera-mqtt-tests.json": {
+      "passed": 15,
+      "failed": 0
+    },
+    "cross-compile.json": {
+      "passed": 13,
+      "failed": 0
+    }
+  },
+  "source_sha256": {
+    "main/app_main.c": "3165cba0ebce5a25ca3cd0b8ce74d04a32e7bd144fe2bbcbc27eeeb59f7fcd31",
+    "main/CMakeLists.txt": "de13bc485c9fd1589d20500324885784538d9780f5c01f3a7537e9c0c445a26c",
+    "main/idf_component.yml": "0ce31b471e123937b20cfdf5a231daf855859835e007eb416da682e1eefae9cc",
+    "Components/App/CMakeLists.txt": "fa252d53daa3b04810212938fb2a5658178f341e60507af841b065dc2d8f3b76",
+    "Components/Svc/CMakeLists.txt": "91fd2c24eb8cb1957ee56081f596e182bcaaed082d88759eb9b206f5a633271d",
+    "Components/Svc/Svc_Encode_Base64/Svc_Encode_Base64.c": "e9dc442862b52f2892fd4f2e3703ea57242934709864a1d1f4dc5d163954f0b4",
+    "Components/Svc/Svc_Encode_Base64/Svc_Encode_Base64.h": "a253610e51765d866eb266e397bc4d0eedc81ff44780f4684c0be3bab33e5670",
+    "Components/Svc/Svc_Isotp/Svc_Isotp.c": "d2f923b9ab64c418fa75f6410e1285c9c65efa0f5ef59374b6f04a9335fe8692",
+    "Components/Svc/Svc_Isotp/Svc_Isotp.h": "e8dda5e8a4fe1b1923c7d2a03d8a5c62e0460d13774c1de4333104ddab1b48e6",
+    "Components/Svc/Svc_Mqtt/Svc_Mqtt.c": "99cd6eed0564c07469db9542272830a20f798a07d9d5bd943ab6322063e26863",
+    "Components/Svc/Svc_Mqtt/Svc_Mqtt.h": "a08083c757c307321f927d6133272951b5b1cad2f65a62be0f240bd10a49ac59",
+    "Components/Svc/Svc_Mqtt/Svc_User_Defined.h": "75295f03218ea24859d27f1e2d2ce326579d99b5d85a877c3795b092d5b00720",
+    "Components/Svc/Svc_Video/Svc_Video.c": "bf5c060298c14e4f966da2ecea9697ddc3394a2cb30c30f34ced023b6948cdd3",
+    "Components/Svc/Svc_Video/Svc_Video.h": "5c0b6b8f4eecbe826b458edb30b974e4fd15d4d9d8994b8632d61fbde8adf0c7",
+    "Components/Bsp/VIDEO/Video.c": "2657d67a03b7841f4bcd39d8c8f0983f9957f7c905851dd409acf57565f5c219",
+    "Components/Bsp/VIDEO/Video.h": "025726cae0958bfc42f236bf6633eb6a2390482e3cd9fc9d5befe67c8b1d57ee",
+    "Components/Bsp/WIFI_CONNECT/WIFI_CONNECT.c": "e71494226f0309b18445d94b0b4a48c37153be3e3265f09127ca37b1a29933ab",
+    "Components/Bsp/WIFI_CONNECT/WIFI_CONNECT.h": "eb5c575f88de26b76bb101b2623db79c22bb9776b77b05b9429e57ef7bd26b1a",
+    "Components/App/App_Cloud_Upload/App_Cloud_Upload.c": "7bb0a4eaf3341a827871823e55086c90c1e9622c535a103a5532928ea8db66fa",
+    "Components/App/App_Cloud_Upload/App_Cloud_Upload.h": "d25526ba6e3468af7be03cd43b517ec4fe77fea0e45348da8471a0e004ef1d84",
+    "Components/App/App_Sensor_Sync/App_Sensor_Sync.c": "322d147701e0f3323395b96f74feab1a9b425a72ad33a955545fcd4b20a2ace8",
+    "Components/App/App_Sensor_Sync/App_Sensor_Sync.h": "b9d6afb4a0a60331dd85476c2d3ce6e225c0a938662fe24544ebea374bfdcfb3",
+    "Components/App/App_Video_Streaming/App_Video_Streaming.c": "83e373cddfe9ed53d56204ce1bed4e60bcd578ec00168d33837e99741b9246ac",
+    "Components/App/App_Video_Streaming/App_Video_Streaming.h": "feb41423e18fa225ce50be46350012db5c5fd71365801c6b064a1783b09082f2",
+    "sdkconfig.defaults": "d685a4471fb8ca23c4d3417a1bfdaefc325607f7a17932b1713c4c33cef3102c",
+    "dependencies.lock": "f755d3e5efcb02ca0af936524723d66a9bf379c81c9ecbc0e8d124dab1661a9e",
+    ".gitignore": "876ac68c97ea24a2059dec669dc2674e6011e3d77210285297f9d1368873f66b"
+  },
+  "limitations": [
+    "No flash or hardware/cloud integration test performed.",
+    "Vendor Kconfig emits a default-board choice warning; customized board is explicitly selected and build succeeds."
+  ]
+}

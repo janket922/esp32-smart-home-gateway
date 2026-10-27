@@ -1,0 +1,75 @@
+{
+  "scope": "Current C encoder and SDK Mbed TLS encoder, host execution with guard bytes; no hardware.",
+  "allocation": 40986,
+  "passed": 14,
+  "failed": 0,
+  "checks": [
+    {
+      "frame_bytes": 1,
+      "passed": true,
+      "guard_intact": true
+    },
+    {
+      "frame_bytes": 2,
+      "passed": true,
+      "guard_intact": true
+    },
+    {
+      "frame_bytes": 3,
+      "passed": true,
+      "guard_intact": true
+    },
+    {
+      "frame_bytes": 30000,
+      "passed": true,
+      "guard_intact": true
+    },
+    {
+      "frame_bytes": 30717,
+      "passed": true,
+      "guard_intact": true
+    },
+    {
+      "frame_bytes": 30718,
+      "passed": true,
+      "guard_intact": true
+    },
+    {
+      "frame_bytes": 30719,
+      "passed": true,
+      "guard_intact": true
+    },
+    {
+      "frame_bytes": 30720,
+      "passed": true,
+      "guard_intact": true
+    },
+    {
+      "frame_bytes": 30721,
+      "passed": true,
+      "guard_intact": true
+    },
+    {
+      "frame_bytes": 1000000,
+      "passed": true,
+      "guard_intact": true
+    },
+    {
+      "frame_bytes": 0,
+      "passed": true,
+      "guard_intact": true
+    },
+    {
+      "case": "null packet",
+      "passed": true
+    },
+    {
+      "case": "null payload",
+      "passed": true
+    },
+    {
+      "case": "null output",
+      "passed": true
+    }
+  ]
+}

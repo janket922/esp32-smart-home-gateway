@@ -1,0 +1,22 @@
+[
+  {
+    "file": "Svc_Video.c",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "App_Cloud_Upload.c",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "App_Video_Streaming.c",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  {
+    "file": "app_main.c",
+    "exit_code": 0,
+    "diagnostics": ""
+  }
+]

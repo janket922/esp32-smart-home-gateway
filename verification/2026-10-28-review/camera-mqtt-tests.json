@@ -1,0 +1,67 @@
+{
+  "scope": "Actual camera C bodies and MQTT event handler with native driver/log mocks; Wi-Fi lifetime checked structurally; no hardware.",
+  "passed": 15,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "normal setup",
+      "passed": true
+    },
+    {
+      "name": "valid frame copy",
+      "passed": true
+    },
+    {
+      "name": "driver index outside mappings",
+      "passed": true
+    },
+    {
+      "name": "frame exceeds actual mapping",
+      "passed": true
+    },
+    {
+      "name": "frame exceeds output capacity",
+      "passed": true
+    },
+    {
+      "name": "empty frame rejected",
+      "passed": true
+    },
+    {
+      "name": "requeue failure invalidates frame",
+      "passed": true
+    },
+    {
+      "name": "unmap uses queried lengths",
+      "passed": true
+    },
+    {
+      "name": "repeated cleanup",
+      "passed": true
+    },
+    {
+      "name": "capture on closed camera",
+      "passed": true
+    },
+    {
+      "name": "NULL mapping rolls back partial setup",
+      "passed": true
+    },
+    {
+      "name": "oversized mapping count rejected",
+      "passed": true
+    },
+    {
+      "name": "empty mapping count rejected",
+      "passed": true
+    },
+    {
+      "name": "MQTT null data/error/event handled",
+      "passed": true
+    },
+    {
+      "name": "Wi-Fi callbacks use static configuration",
+      "passed": true
+    }
+  ]
+}

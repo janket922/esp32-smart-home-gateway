@@ -1,0 +1,80 @@
+{
+  "scope": "Reference Svc C body with real host threads/Python-backed mutexes, fake camera/queues/heap. Not ESP FreeRTOS/hardware execution. Original business files are unchanged.",
+  "passed": 14,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "repeated_start_keeps_capturing",
+      "passed": true,
+      "evidence": {}
+    },
+    {
+      "name": "failed_capture_returns_buffer_without_ready_frame",
+      "passed": true,
+      "evidence": {
+        "free": 6,
+        "ready": 0
+      }
+    },
+    {
+      "name": "close_does_not_force_release",
+      "passed": true,
+      "evidence": {}
+    },
+    {
+      "name": "owner_release_unblocks_close",
+      "passed": true,
+      "evidence": {}
+    },
+    {
+      "name": "deinit_waits_before_freeing_payloads",
+      "passed": true,
+      "evidence": {}
+    },
+    {
+      "name": "deinit_frees_after_release",
+      "passed": true,
+      "evidence": {}
+    },
+    {
+      "name": "close_timeout_preserves_borrowed_memory",
+      "passed": true,
+      "evidence": {}
+    },
+    {
+      "name": "deinit_retry_after_late_release",
+      "passed": true,
+      "evidence": {}
+    },
+    {
+      "name": "blocked_hold_exits_without_accessing_deleted_queue",
+      "passed": true,
+      "evidence": {}
+    },
+    {
+      "name": "different_task_cannot_release_owner_frame",
+      "passed": true,
+      "evidence": {}
+    },
+    {
+      "name": "reset_waits_and_keeps_pool",
+      "passed": true,
+      "evidence": {}
+    },
+    {
+      "name": "blocked_camera_prevents_unsafe_deinit",
+      "passed": true,
+      "evidence": {}
+    },
+    {
+      "name": "partial_pool_allocation_rolls_back",
+      "passed": true,
+      "evidence": {}
+    },
+    {
+      "name": "init_recovers_after_allocation_failure",
+      "passed": true,
+      "evidence": {}
+    }
+  ]
+}

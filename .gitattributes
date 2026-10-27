@@ -1,0 +1,8 @@
+* text=auto
+*.c text
+*.h text
+*.py text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+*.pptx binary

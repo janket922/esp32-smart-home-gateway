@@ -1,0 +1,17 @@
+{
+  "scope": "Local edits to existing functions; original public header and all other business files preserved. First Init remains before task creation.",
+  "files": [
+    {
+      "path": "D:\\ProgramData\\codex\\test_9_29_zhi_neng_jia_ju\\Components\\Svc\\Svc_Video\\Svc_Video.c",
+      "encoding": "gb18030",
+      "before_sha256": "211c2c9896dafd2ed882fb9f0261ab29e14a905d677e41fa8eb96144cac99c47",
+      "after_sha256": "bf5c060298c14e4f966da2ecea9697ddc3394a2cb30c30f34ced023b6948cdd3"
+    },
+    {
+      "path": "D:\\ProgramData\\codex\\test_9_29_zhi_neng_jia_ju\\Components\\App\\App_Cloud_Upload\\App_Cloud_Upload.c",
+      "encoding": "gb18030",
+      "before_sha256": "5ce1c1c4c815f0dc3b68bee681696f953ca37d47afbfbb3e2e0390b17731c8cf",
+      "after_sha256": "7371ed8fdb739b853d297f24937007dc1814f48ca8db3dff18d6362766c9bc4f"
+    }
+  ]
+}

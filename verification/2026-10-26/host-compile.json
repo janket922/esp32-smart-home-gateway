@@ -1,0 +1,33 @@
+[
+  {
+    "command": [
+      "D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+      "/nologo",
+      "/utf-8",
+      "/c",
+      "/Od",
+      "/Oi-",
+      "/GS-",
+      "/Zl",
+      "/FoD:\\ProgramData\\codex\\test_9_29_zhi_neng_jia_ju\\verification\\2026-10-26\\build\\host_harness.obj",
+      "D:\\ProgramData\\codex\\test_9_29_zhi_neng_jia_ju\\verification\\2026-10-26\\build\\host_harness.c"
+    ],
+    "exit_code": 0,
+    "stdout": "host_harness.c\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe",
+      "/nologo",
+      "/dll",
+      "/noentry",
+      "/nodefaultlib",
+      "/out:D:\\ProgramData\\codex\\test_9_29_zhi_neng_jia_ju\\verification\\2026-10-26\\build\\host_harness.dll",
+      "D:\\ProgramData\\codex\\test_9_29_zhi_neng_jia_ju\\verification\\2026-10-26\\build\\host_harness.obj"
+    ],
+    "exit_code": 0,
+    "stdout": "  正在创建库 D:\\ProgramData\\codex\\test_9_29_zhi_neng_jia_ju\\verification\\2026-10-26\\build\\host_harness.lib 和对象 D:\\ProgramData\\codex\\test_9_29_zhi_neng_jia_ju\\verification\\2026-10-26\\build\\host_harness.exp\n",
+    "stderr": ""
+  }
+]

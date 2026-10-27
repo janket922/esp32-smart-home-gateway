@@ -1,0 +1,214 @@
+{
+  "scope": "Host compilation of selected current C function bodies with RTOS, camera and allocator mocks. App task loop bounded to finite iterations. Base64 encoder body from project SDK ESP-IDF 6.0.1. Not target build, real FreeRTOS, real concurrency, hardware or cloud validation.",
+  "base64_encoder_source": "D:\\esp\\v6.0.1\\esp-idf\\components\\mbedtls\\mbedtls\\tf-psa-crypto\\drivers\\builtin\\src\\base64.c",
+  "source_sha256": {
+    "Components/App/App_Cloud_Upload/App_Cloud_Upload.c": "5ce1c1c4c815f0dc3b68bee681696f953ca37d47afbfbb3e2e0390b17731c8cf",
+    "Components/App/App_Cloud_Upload/App_Cloud_Upload.h": "d25526ba6e3468af7be03cd43b517ec4fe77fea0e45348da8471a0e004ef1d84",
+    "Components/App/App_Sensor_Sync/App_Sensor_Sync.c": "322d147701e0f3323395b96f74feab1a9b425a72ad33a955545fcd4b20a2ace8",
+    "Components/App/App_Video_Streaming/App_Video_Streaming.c": "83e373cddfe9ed53d56204ce1bed4e60bcd578ec00168d33837e99741b9246ac",
+    "Components/Svc/Svc_Video/Svc_Video.c": "211c2c9896dafd2ed882fb9f0261ab29e14a905d677e41fa8eb96144cac99c47",
+    "Components/Svc/Svc_Video/Svc_Video.h": "5c0b6b8f4eecbe826b458edb30b974e4fd15d4d9d8994b8632d61fbde8adf0c7",
+    "Components/Svc/Svc_Encode_Base64/Svc_Encode_Base64.c": "8b8d4e47eca1e3fd85a9266edc216b4ac3dd8f7a159992a0c5df6d0948c9f995",
+    "Components/Svc/Svc_Encode_Base64/Svc_Encode_Base64.h": "e5e0794f85f63fced6cdf044733ef612934badfea8b96fdf1d296f1fd36a807d",
+    "Components/Bsp/VIDEO/Video.c": "90c5f1a14c915d24bbcb39feb9b71e204952bb48e8919d0cc8548e801a6e1a18"
+  },
+  "checks": [
+    {
+      "name": "sensor_empty_queue_returns_failure",
+      "passed": true,
+      "evidence": {
+        "return": -1
+      }
+    },
+    {
+      "name": "sensor_null_output_returns_failure",
+      "passed": true,
+      "evidence": {}
+    },
+    {
+      "name": "sensor_valid_queue_roundtrip",
+      "passed": true,
+      "evidence": {
+        "return": 0
+      }
+    },
+    {
+      "name": "sensor_json_normal_values_parse",
+      "passed": true,
+      "evidence": {
+        "characters": 74,
+        "capacity": 200
+      }
+    },
+    {
+      "name": "sensor_json_previous_extreme_finite_case_fits",
+      "passed": true,
+      "evidence": {
+        "characters": 149,
+        "including_terminator": 150,
+        "capacity": 200
+      }
+    },
+    {
+      "name": "video_pool_initialization",
+      "passed": true,
+      "evidence": {
+        "free": 6,
+        "ready": 0
+      }
+    },
+    {
+      "name": "video_init_failure_does_not_mark_initialized",
+      "passed": true,
+      "evidence": {
+        "initialized": 0,
+        "free": -1
+      }
+    },
+    {
+      "name": "video_successful_frame_roundtrip",
+      "passed": true,
+      "evidence": {
+        "free": 6
+      }
+    },
+    {
+      "name": "video_pool_reinit_without_active_consumer",
+      "passed": true,
+      "evidence": {
+        "free": 6,
+        "ready": 0
+      }
+    },
+    {
+      "name": "video_capture_failure_propagates",
+      "passed": true,
+      "evidence": {
+        "return": -1
+      }
+    },
+    {
+      "name": "video_failed_capture_preserves_buffer_count",
+      "passed": true,
+      "evidence": {
+        "free": 5,
+        "ready": 1
+      }
+    },
+    {
+      "name": "video_failed_capture_not_published_to_ready_queue",
+      "passed": false,
+      "evidence": {
+        "ready": 1,
+        "expected_ready": 0
+      }
+    },
+    {
+      "name": "video_consumer_cannot_hold_failed_frame",
+      "passed": false,
+      "evidence": {
+        "hold_return": 0,
+        "frame_length": 0
+      }
+    },
+    {
+      "name": "video_capacity_survives_six_capture_failures",
+      "passed": true,
+      "evidence": {
+        "next_capture_return": 0,
+        "free": 0,
+        "ready": 6
+      }
+    },
+    {
+      "name": "video_app_continues_capture_across_three_iterations",
+      "passed": false,
+      "evidence": {
+        "expected_capture_calls": 3,
+        "actual_capture_calls": 1,
+        "limitation": "task loop bounded to three iterations; no scheduler"
+      }
+    },
+    {
+      "name": "video_stop_preserves_consumer_ownership",
+      "passed": false,
+      "evidence": {
+        "off_return": 0,
+        "holding_flag": 0,
+        "free": 6,
+        "consumer_pointer_still_nonempty": true
+      }
+    },
+    {
+      "name": "video_held_buffer_not_reused_before_owner_release",
+      "passed": false,
+      "evidence": {
+        "original_first_byte": 1,
+        "first_byte_after_interleaved_restart": 7,
+        "limitation": "controlled sequential interleaving, not actual concurrent execution"
+      }
+    },
+    {
+      "name": "base64_json_roundtrip_3",
+      "passed": true,
+      "evidence": {
+        "frame_bytes": 3,
+        "allocation": 40986,
+        "changed_guard_bytes": 0,
+        "valid_roundtrip": true
+      }
+    },
+    {
+      "name": "base64_json_roundtrip_30000",
+      "passed": true,
+      "evidence": {
+        "frame_bytes": 30000,
+        "allocation": 40986,
+        "changed_guard_bytes": 0,
+        "valid_roundtrip": true
+      }
+    },
+    {
+      "name": "base64_json_roundtrip_30717",
+      "passed": true,
+      "evidence": {
+        "frame_bytes": 30717,
+        "allocation": 40986,
+        "changed_guard_bytes": 0,
+        "valid_roundtrip": true
+      }
+    },
+    {
+      "name": "base64_json_roundtrip_30718",
+      "passed": false,
+      "evidence": {
+        "frame_bytes": 30718,
+        "allocation": 40986,
+        "changed_guard_bytes": 1,
+        "valid_roundtrip": false
+      }
+    },
+    {
+      "name": "base64_json_roundtrip_30719",
+      "passed": false,
+      "evidence": {
+        "frame_bytes": 30719,
+        "allocation": 40986,
+        "changed_guard_bytes": 1,
+        "valid_roundtrip": false
+      }
+    },
+    {
+      "name": "base64_json_roundtrip_30720",
+      "passed": false,
+      "evidence": {
+        "frame_bytes": 30720,
+        "allocation": 40986,
+        "changed_guard_bytes": 1,
+        "valid_roundtrip": false
+      }
+    }
+  ],
+  "passed": 15,
+  "failed": 8
+}
