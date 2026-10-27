@@ -1,6 +1,6 @@
 # ESP32-S3 智能家居网关
 
-基于 ESP-IDF 的智能家居固件：通过 OV2640 DVP 摄像头采集 JPEG，编码为 Base64 JSON 后经 MQTT 上传；通过 TWAI/CAN ISO-TP 接收传感器数据并上传温度、湿度和照度。支持按键控制视频采集。
+基于正点原子DNESP32S3开发板和 ESP-IDF 的智能家居固件：通过 OV2640 DVP 摄像头采集 JPEG，编码为 Base64 JSON 后经 MQTT 上传；通过 TWAI/CAN ISO-TP 接收传感器数据并上传温度、湿度和照度。支持按键控制视频采集。
 
 ## 硬件与开发环境
 
