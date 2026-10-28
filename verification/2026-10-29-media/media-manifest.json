@@ -1,0 +1,27 @@
+{
+  "files": [
+    {
+      "file": "验证1.png",
+      "bytes": 303959,
+      "sha256": "6118f84de4b293efa07f46c9d96e4412b28fa0771ae12432ff000e94660e4fb7",
+      "width": 1548,
+      "height": 1330
+    },
+    {
+      "file": "验证2.jpg",
+      "bytes": 3171445,
+      "sha256": "83f258f3efeb3eebf6995b2a4c8676e2f2bd1630439fd2f01cbae13043616dd3",
+      "width": 4096,
+      "height": 3072
+    },
+    {
+      "file": "mqtt摄像头验证.mp4",
+      "bytes": 7261322,
+      "sha256": "ce260899c87fc8ea51ffc80e5bd9ab8965e1fed20010d765b3be4d279f6bb526",
+      "duration_seconds": 4.965,
+      "width": 1920.0,
+      "height": 1080.0
+    }
+  ],
+  "media_modified": false
+}

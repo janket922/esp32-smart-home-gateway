@@ -1,0 +1,282 @@
+{
+  "package": "tools/mqtt-image-validator/MQTT-image-validator-windows.zip",
+  "sha256": "4b90412da9a4994eff7c1607ab70776ae9c6fb48a5ee9c08830e6bf66a67a2a8",
+  "bytes": 22450623,
+  "source_file_count": 54,
+  "excluded_local_settings": [
+    "config.ini",
+    "config_rx.ini"
+  ],
+  "source_files": [
+    {
+      "file": "audio/qtaudio_windows.dll",
+      "bytes": 88728,
+      "sha256": "819f6a0000fbb9aeb177ce1d87e34849ae15361940ae997da56ed6e515a4a551"
+    },
+    {
+      "file": "bearer/qgenericbearer.dll",
+      "bytes": 106136,
+      "sha256": "6f02bcd5a5418425d0dc5facc9fe99ca0c4c76c777d16d9766767c9c29ebd9c0"
+    },
+    {
+      "file": "D3Dcompiler_47.dll",
+      "bytes": 3466856,
+      "sha256": "efbdbbcd0d954f8fdc53467de5d89ad525e4e4a9cfff8a15d07c6fdb350c407f"
+    },
+    {
+      "file": "iconengines/qsvgicon.dll",
+      "bytes": 47768,
+      "sha256": "b6815d4ce8808fc2d1bb9c307460f98ff223418b75dd9847f016cf55772f2851"
+    },
+    {
+      "file": "imageformats/qgif.dll",
+      "bytes": 39576,
+      "sha256": "69c5cd4b9915382175fbe316106bf7dc4ddf072cd4bbfc4fe8503b59d0640346"
+    },
+    {
+      "file": "imageformats/qicns.dll",
+      "bytes": 50328,
+      "sha256": "1d4ee33243c8a7ebf0f7399fd724f8e688342383dc5a764f8e58cf5fcd8804b5"
+    },
+    {
+      "file": "imageformats/qico.dll",
+      "bytes": 41112,
+      "sha256": "2ddcb59e945691e3a52bf9e8af72c165b9aa67d5eb98127a5b6f34ee7c05b0ce"
+    },
+    {
+      "file": "imageformats/qjpeg.dll",
+      "bytes": 396952,
+      "sha256": "929b399c39dd6b65f4661ebd06b96840852bd0b73419dc96c4767f5c9e969c2f"
+    },
+    {
+      "file": "imageformats/qsvg.dll",
+      "bytes": 32920,
+      "sha256": "c7c1d3ff287ce828998253f95a5bc986d90028d26688b9c487527164dbe8cde1"
+    },
+    {
+      "file": "imageformats/qtga.dll",
+      "bytes": 31384,
+      "sha256": "64eaa619274fe15fe8fd22e272cff61d0ac0ad93dc96464c642ee20a2c1fd3e5"
+    },
+    {
+      "file": "imageformats/qtiff.dll",
+      "bytes": 534680,
+      "sha256": "de041775268b877a97e6a5fcadbbec9d11b04c8165667dbad1dbcbfe9a715be6"
+    },
+    {
+      "file": "imageformats/qwbmp.dll",
+      "bytes": 30872,
+      "sha256": "9a5b813b19b012013c12f6ba95a16a059c2a7928d4114be75dd97c46276280b9"
+    },
+    {
+      "file": "imageformats/qwebp.dll",
+      "bytes": 460952,
+      "sha256": "7f566e9c6e11d96e47e942100e57b83fe0fa8e77f3a238cd2234186f604ffb3f"
+    },
+    {
+      "file": "libEGL.dll",
+      "bytes": 29336,
+      "sha256": "e031b069f1d84993c1ea53ef0024c43a65d81b943eda44b0e1b635b0c0e6d982"
+    },
+    {
+      "file": "libgcc_s_dw2-1.dll",
+      "bytes": 113678,
+      "sha256": "aa8180b63a849e755323bb1abe364b654c0eed9b433738fc491e5b64c410ef76"
+    },
+    {
+      "file": "libGLESV2.dll",
+      "bytes": 4513944,
+      "sha256": "16e8504074756145a5e9d8f5654b51fd5b2ebdec087475a1c0411e3cdf2e6ccc"
+    },
+    {
+      "file": "libstdc++-6.dll",
+      "bytes": 1542158,
+      "sha256": "c05b714b94bab75ddfb77339aa5f48772be7ac2c3e9d7322e2d1549fc0a39cfd"
+    },
+    {
+      "file": "libwinpthread-1.dll",
+      "bytes": 47104,
+      "sha256": "ae1b4fe65da58196fea59b4dc0be64ae68d6ef04497027fadbddbc2dc38d843d"
+    },
+    {
+      "file": "mediaservice/dsengine.dll",
+      "bytes": 423576,
+      "sha256": "c94d0ed3b3d031c8d45671ae923a2c2ed04cb01e48a0e952d0656c8ee4f9506c"
+    },
+    {
+      "file": "mediaservice/qtmedia_audioengine.dll",
+      "bytes": 71832,
+      "sha256": "34954be9d99a8f469950b5bfd50963c0665fef6e40d47433204f905ecbfcbc3c"
+    },
+    {
+      "file": "opengl32sw.dll",
+      "bytes": 15995904,
+      "sha256": "25ae7577e066fa80519a8f1c314b15cdd22e4a8d3ecd2a36eccc79e40714a91d"
+    },
+    {
+      "file": "platforms/qwindows.dll",
+      "bytes": 1983128,
+      "sha256": "7a43bfa886dce18a60762c9af483bf4e2c1bc5d6b6d3036852c7cd8db0aec6e6"
+    },
+    {
+      "file": "playlistformats/qtmultimedia_m3u.dll",
+      "bytes": 34968,
+      "sha256": "3df7ddc2e234a1ce5a41c8ab391b7059f840203d5736036c8b1e8221300db96a"
+    },
+    {
+      "file": "Qt5Core.dll",
+      "bytes": 6631064,
+      "sha256": "85906d8d5d6e6b5dc72617a30ca2c3e50f9cbf3c8f117fef3ff929f41d091e55"
+    },
+    {
+      "file": "Qt5Gui.dll",
+      "bytes": 6947480,
+      "sha256": "19e4e4423fb786e192f7cd2633aabba720068fe65b4e384abfe2b468847b8acf"
+    },
+    {
+      "file": "Qt5Multimedia.dll",
+      "bytes": 1069208,
+      "sha256": "a7d4d761fedafe4fb1caad13856bc17fc34727a946b1a5834faef62211bed002"
+    },
+    {
+      "file": "Qt5Network.dll",
+      "bytes": 1891992,
+      "sha256": "d4648c135be48326cb2add7f8d4c5b9ba5e35cca1d63e16a6e317db68bbcdb0f"
+    },
+    {
+      "file": "Qt5Svg.dll",
+      "bytes": 370840,
+      "sha256": "ccd05448ac46a98432b20694c3cbca756ed7baf061b0b0a5108ac196f509760d"
+    },
+    {
+      "file": "Qt5Widgets.dll",
+      "bytes": 6339224,
+      "sha256": "edab7887514ee11ce78d332161f2eb9414c7b9dfe2f07b461a5026308c3da630"
+    },
+    {
+      "file": "styles/qwindowsvistastyle.dll",
+      "bytes": 200344,
+      "sha256": "ba047261d9b999344c3b2bddb1b82c0d858501d1679f073e20ae4ea364710918"
+    },
+    {
+      "file": "translations/qt_ar.qm",
+      "bytes": 171443,
+      "sha256": "9ca5f0dd47cc394403e604de3a1a4dfdea1bdf7487f54999e4dcd45ed291d682"
+    },
+    {
+      "file": "translations/qt_bg.qm",
+      "bytes": 178970,
+      "sha256": "230b3d554f36d780eabfe1f12b441c1261c2280e8e8897f1e68aeed428cdfcbf"
+    },
+    {
+      "file": "translations/qt_ca.qm",
+      "bytes": 199007,
+      "sha256": "4013539d6d3d2e8949a5c43bf92d79cc54f740c99098c06a01fbc6293e7197fc"
+    },
+    {
+      "file": "translations/qt_cs.qm",
+      "bytes": 190550,
+      "sha256": "a78670b49404bda381bb08d8a57882e6ac018e77a360ac79a455ddd5849a02e7"
+    },
+    {
+      "file": "translations/qt_da.qm",
+      "bytes": 187717,
+      "sha256": "e412d34e3cc3a1c0c099147d80e1cd6b932e4583c03e2d374d83816b710975f3"
+    },
+    {
+      "file": "translations/qt_de.qm",
+      "bytes": 216009,
+      "sha256": "c721da61e09e3fa3b9025bc81653fa902687f82ce337d3122acd9def205f4ae8"
+    },
+    {
+      "file": "translations/qt_en.qm",
+      "bytes": 23,
+      "sha256": "307cef95dd5b36ff215055d427e1885b7fc3650c9224cf76d63056545996ff60"
+    },
+    {
+      "file": "translations/qt_es.qm",
+      "bytes": 182163,
+      "sha256": "86c4f21b984b921b6708ff05f27c6876588cc347d9572e621866d776ce1cdbb6"
+    },
+    {
+      "file": "translations/qt_fi.qm",
+      "bytes": 193777,
+      "sha256": "93de31d0b47fefebde2949b70fae4d7061beea9b8f7fac503f9a8811d0d9f8be"
+    },
+    {
+      "file": "translations/qt_fr.qm",
+      "bytes": 182616,
+      "sha256": "48d914b686f9242a3a43b186cb2d6facdeb749310baf48b0d1f7ff85a1c33bf8"
+    },
+    {
+      "file": "translations/qt_gd.qm",
+      "bytes": 189570,
+      "sha256": "d1c0717546502ab3d243487aefb22a073a4bff8413ad51f7a6235fc722e76c82"
+    },
+    {
+      "file": "translations/qt_he.qm",
+      "bytes": 138680,
+      "sha256": "19a8f435880328f9ccda4fecdfc20bac7afae589c07d0e2b5563366e908ac8e3"
+    },
+    {
+      "file": "translations/qt_hu.qm",
+      "bytes": 176911,
+      "sha256": "4e5be843e3d6d5eb6c3486ba7418099a87b72bd2aa867edbafcf0c14b768b49f"
+    },
+    {
+      "file": "translations/qt_it.qm",
+      "bytes": 178280,
+      "sha256": "8b5bae09dd768bdab9a89c55ab44c0fe60d6abb61d66980722e80947883b05c4"
+    },
+    {
+      "file": "translations/qt_ja.qm",
+      "bytes": 144208,
+      "sha256": "385489c6cf2760ca8e562a1823ef61e289400b193a2b6004ff7b3bbca16c6196"
+    },
+    {
+      "file": "translations/qt_ko.qm",
+      "bytes": 144402,
+      "sha256": "e0fc37dc50e581f188781e19edd20aa95118409acee1dee40f09a633fed3bd04"
+    },
+    {
+      "file": "translations/qt_lv.qm",
+      "bytes": 153598,
+      "sha256": "257d1201da42c19c34ea0a5f0dfbba3d438fc273a7d5b5b97cd13196e963ed28"
+    },
+    {
+      "file": "translations/qt_pl.qm",
+      "bytes": 175158,
+      "sha256": "cb50f1d713eb7b4b189b7098bb0e7691ae65f34ced56336bf52be9741a88119c"
+    },
+    {
+      "file": "translations/qt_ru.qm",
+      "bytes": 200467,
+      "sha256": "6d16f9d8621749bea0c5aa2ad03201d9d93525a4e07384a2287eb4b7b90efb1a"
+    },
+    {
+      "file": "translations/qt_sk.qm",
+      "bytes": 135602,
+      "sha256": "a0bee147e791eb239510eb9a7966e8fce194cf1e1e82ed3f63b8aa49127eed4b"
+    },
+    {
+      "file": "translations/qt_uk.qm",
+      "bytes": 173958,
+      "sha256": "2519bd11c7b5c4d6c3ca35be039d00d34bfd9ddcfeb72f4ef1b6ca0adeeaf797"
+    },
+    {
+      "file": "translations/qt_zh_TW.qm",
+      "bytes": 127728,
+      "sha256": "7b5ab0f55a40c1a12b220900eb53ccf5ab65040fc1f28c98c36b8c82e66f9dbc"
+    },
+    {
+      "file": "图像发送端.exe",
+      "bytes": 281600,
+      "sha256": "36c6a136ac0b9c909371bdf44a6e2cc8e9f4e07732c7f0e67908531aa6ec6946"
+    },
+    {
+      "file": "图像接收端.exe",
+      "bytes": 264192,
+      "sha256": "359f2969bf69f278289ba8579617c4c7935d7b44cd879c47689e27be792b192f"
+    }
+  ]
+}

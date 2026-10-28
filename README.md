@@ -2,6 +2,18 @@
 
 基于正点原子DNESP32S3开发板和 ESP-IDF 的智能家居固件：通过 OV2640 DVP 摄像头采集 JPEG，编码为 Base64 JSON 后经 MQTT 上传；通过 TWAI/CAN ISO-TP 接收传感器数据并上传温度、湿度和照度。支持按键控制视频采集。
 
+## 实物验证
+
+项目已收录 MQTT 接收截图、开发板实物照片和图传演示视频。
+
+![开发板与 PC 接收端实物验证](验证2.jpg)
+
+- [查看接收截图与完整验证资料](docs/validation/README.md)
+- [打开图传演示视频](mqtt摄像头验证.mp4)
+- [下载第三方 PC 图传验证工具](tools/mqtt-image-validator/README.md)
+
+PC 验证工具不是本项目作者开发的，原作者及应用许可信息尚未核实；工具包已排除本地登录配置。
+
 ## 硬件与开发环境
 
 - ESP32-S3，16 MiB Flash，八线 PSRAM。
