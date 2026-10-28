@@ -1,0 +1,111 @@
+{
+  "scope": "Current local C adapter plus actual upstream isotp-c, mocked RTOS and deferred-pointer TWAI driver. Single host thread; no hardware or real ISR concurrency.",
+  "passed": 26,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "submit queues async frame",
+      "passed": true
+    },
+    {
+      "name": "driver retains stable descriptor and copied payload",
+      "passed": true
+    },
+    {
+      "name": "slot not recycled before TX done",
+      "passed": true
+    },
+    {
+      "name": "pending descriptors do not alias",
+      "passed": true
+    },
+    {
+      "name": "pool exhaustion fails without overwriting queued frame",
+      "passed": true
+    },
+    {
+      "name": "TX done recycles slot and records failure",
+      "passed": true
+    },
+    {
+      "name": "recycled slot reusable",
+      "passed": true
+    },
+    {
+      "name": "delete preserves in-flight memory",
+      "passed": true
+    },
+    {
+      "name": "driver queue rejection returns slot",
+      "passed": true
+    },
+    {
+      "name": "invalid TX lengths rejected",
+      "passed": true
+    },
+    {
+      "name": "ISR enqueues without touching ISO-TP state",
+      "passed": true
+    },
+    {
+      "name": "poll emits valid persistent flow control",
+      "passed": true
+    },
+    {
+      "name": "multi-frame sensor payload reassembles",
+      "passed": true
+    },
+    {
+      "name": "unmatched CAN ID not delivered",
+      "passed": true
+    },
+    {
+      "name": "DLC bounds reject truncated single frame",
+      "passed": true
+    },
+    {
+      "name": "complete message preserved before next queued message",
+      "passed": true
+    },
+    {
+      "name": "undersized output rejected instead of truncated success",
+      "passed": true
+    },
+    {
+      "name": "poll gap diagnostic records scheduling delay",
+      "passed": true
+    },
+    {
+      "name": "incomplete ISO-TP receive times out to idle",
+      "passed": true
+    },
+    {
+      "name": "next complete message recovers after protocol timeout",
+      "passed": true
+    },
+    {
+      "name": "bounded RX queue counts overflow",
+      "passed": true
+    },
+    {
+      "name": "sensor full queue never waits behind MQTT",
+      "passed": true
+    },
+    {
+      "name": "bus-off initiates recovery",
+      "passed": true
+    },
+    {
+      "name": "ongoing recovery is not restarted every poll",
+      "passed": true
+    },
+    {
+      "name": "active CAN clears recovery state",
+      "passed": true
+    },
+    {
+      "name": "later bus-off can recover again",
+      "passed": true
+    }
+  ]
+}

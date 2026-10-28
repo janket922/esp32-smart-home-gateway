@@ -3,6 +3,7 @@
 static const char *TAG = "twai_sender";
 esp_isotp_handle_t isotp_handle = NULL;
 twai_node_handle_t node = NULL;
+static bool recovery_requested;
 esp_err_t Svc_Isotp_Send(uint8_t *data, size_t len)
 {
 	if (data == NULL)
@@ -14,6 +15,7 @@ esp_err_t Svc_Isotp_Send(uint8_t *data, size_t len)
 
 void Svc_Isotp_Init(void)
 {
+	if (isotp_handle != NULL) return;
 
 	printf("===================TWAI Sender Example Starting...===================\n");
 	// Configure TWAI node
@@ -51,7 +53,7 @@ void Svc_Isotp_Init(void)
 	filter_config.id = 0x000;
 	filter_config.mask = 0x000;
 
-	twai_node_config_mask_filter(node, 0, &filter_config);
+	ESP_ERROR_CHECK(twai_node_config_mask_filter(node, 0, &filter_config));
 
 	// isotp
 	esp_isotp_config_t isotp_config = {
@@ -73,6 +75,7 @@ esp_err_t Svc_Isotp_Poll(void)
 		return ESP_ERR_INVALID_STATE;
 	}
 
+	if (Svc_Isotp_TwaiError_Detect()) return ESP_ERR_NOT_FINISHED;
 	return esp_isotp_poll(isotp_handle);
 }
 
@@ -102,14 +105,42 @@ esp_err_t Svc_Isotp_Receive(uint8_t *pdata,
 
 uint8_t Svc_Isotp_TwaiError_Detect(void)
 {
-	twai_node_status_t status_;
-	twai_node_get_info(node, &status_, NULL);
-	if (status_.state == TWAI_ERROR_BUS_OFF)
-	{
-		ESP_LOGW(TAG, "Bus-off detected");
-		ESP_ERROR_CHECK(twai_node_disable(node));
-		ESP_ERROR_CHECK(twai_node_delete(node));
-		return 1;
-	}
-	return 0;
+    if (node == NULL) return 1;
+    twai_node_status_t status = {0};
+    if (twai_node_get_info(node, &status, NULL) != ESP_OK) return 1;
+    if (status.state != TWAI_ERROR_BUS_OFF)
+    {
+        if (recovery_requested) ESP_LOGI(TAG, "CAN bus recovery completed");
+        recovery_requested = false;
+        return 0;
+    }
+    if (!recovery_requested)
+    {
+        esp_err_t ret = twai_node_recover(node);
+        if (ret == ESP_OK)
+        {
+            recovery_requested = true;
+            ESP_LOGW(TAG, "CAN bus-off: recovery requested; node and ISO-TP handle retained");
+        }
+    }
+    return 1;
+}
+
+void Svc_Isotp_Log_Diagnostics(void)
+{
+    if (node == NULL || isotp_handle == NULL) return;
+    twai_node_status_t status = {0};
+    twai_node_record_t record = {0};
+    esp_isotp_diagnostics_t diag = {0};
+    if (twai_node_get_info(node, &status, &record) != ESP_OK ||
+        esp_isotp_get_diagnostics(isotp_handle, &diag) != ESP_OK) return;
+    ESP_LOGI("ISOTP_DIAG",
+             "state=%d TEC=%u REC=%u buserr=%lu canrx=%lu matched=%lu rxdrop=%lu "
+             "tx_submit_fail=%lu tx_fail=%lu messages=%lu pending=%lu gap_max_us=%lu rx_state=%d rx_result=%d",
+             (int)status.state, (unsigned)status.tx_error_count, (unsigned)status.rx_error_count,
+             (unsigned long)record.bus_err_num, (unsigned long)diag.can_rx_frames,
+             (unsigned long)diag.matched_rx_frames, (unsigned long)diag.rx_queue_drops,
+             (unsigned long)diag.tx_submit_failures, (unsigned long)diag.tx_failed_frames,
+             (unsigned long)diag.complete_messages, (unsigned long)diag.pending_rx_frames,
+             (unsigned long)diag.max_poll_gap_us, diag.receive_status, diag.receive_result);
 }

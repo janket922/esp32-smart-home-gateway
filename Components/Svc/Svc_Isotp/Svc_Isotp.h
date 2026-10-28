@@ -65,6 +65,7 @@ esp_err_t Svc_Isotp_Receive(uint8_t *pdata,
 uint32_t Svc_Isotp_Processing(uint8_t *pdata, uint32_t len);
 
 uint8_t Svc_Isotp_TwaiError_Detect(void);
+void Svc_Isotp_Log_Diagnostics(void);
 
 
 #endif

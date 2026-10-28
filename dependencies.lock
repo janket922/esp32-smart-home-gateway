@@ -26,14 +26,12 @@ dependencies:
       type: service
     version: 0.5.3
   espressif/esp_isotp:
-    component_hash: 010e63687b6892e1b7c592bd580552be19103763ab1a1075dc3d972c42504234
     dependencies:
     - name: idf
-      require: private
       version: '>=5.5.0'
     source:
-      registry_url: https://components.espressif.com/
-      type: service
+      path: Components/ThirdParty/esp_isotp
+      type: local
     version: 0.1.1
   espressif/esp_new_jpeg:
     component_hash: e1e7e6991193c41ed6c9fc386702aa7821433319e7aa9c3147cd3236310cd69c
@@ -129,6 +127,6 @@ direct_dependencies:
 - espressif/mqtt
 - espressif/usb_host_uvc
 - idf
-manifest_hash: be50133d23b351465e608dad9f74a83860d63b703f41ec702d01298d6923dca0
+manifest_hash: 6b83fcf9381f0ea1046133ea8f89b6ecaaf13c524a233528c5d77e7ba00fc266
 target: esp32s3
 version: 3.0.0

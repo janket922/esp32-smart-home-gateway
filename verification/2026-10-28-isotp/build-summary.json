@@ -1,0 +1,20 @@
+{
+  "target": "esp32s3",
+  "idf_version": "6.0.1",
+  "full_build_passed": true,
+  "image_bytes": 1068496,
+  "adapter_source": "Components\\ThirdParty\\esp_isotp\\src\\esp_isotp.c",
+  "native_tests": {
+    "passed": 26,
+    "failed": 0
+  },
+  "hardware_verified": false,
+  "sha256": {
+    "Components/ThirdParty/esp_isotp/src/esp_isotp.c": "76cca94c11686bbeb8cf2a917667b296365472d4ab606c9d39b50ce4a6e3251d",
+    "Components/ThirdParty/esp_isotp/inc/esp_isotp.h": "5ead0d0f3b59c530780859c9140b322319644e44af02232f8f1f530755481e64",
+    "Components/App/App_Sensor_Sync/App_Sensor_Sync.c": "13ae7b70c59d0c7d496f229c95696a24e5ec33718d5feefa07049dbc437452c0",
+    "Components/Svc/Svc_Isotp/Svc_Isotp.c": "79231d8b62e50981094a9cb5216299225740a537633aa7a15bf259ef113534b4",
+    "Components/Svc/Svc_Isotp/Svc_Isotp.h": "e0974db2ac91835041f4dc1774d6aedd6ad369f6a841d7515790275ddc6527e2",
+    "main/idf_component.yml": "d09a4e21eaeb79879c9cda412071c354f807e8c7d8aca6850627da95029088d8"
+  }
+}

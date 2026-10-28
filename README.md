@@ -40,6 +40,7 @@ idf.py -p PORT flash monitor
 | `main` | 系统启动与业务任务初始化 |
 | `Components/App` | 视频状态机、传感器同步、云端上传 |
 | `Components/Svc` | 帧池与所有权、Base64/JSON、MQTT、ISO-TP |
+| `Components/ThirdParty/esp_isotp` | 含异步发送生命周期与并发修订的 ISO-TP 组件 |
 | `Components/Bsp` | 摄像头、Wi-Fi、按键、LED、XL9555 与厂商组件 |
 | `verification/2026-10-28-review` | 本次修复后的验证脚本与结果 |
 | `reference` | 历史方案参考，不参与固件构建 |
@@ -53,3 +54,5 @@ idf.py -p PORT flash monitor
 `pytest_mqtt_ssl.py` 是项目起始模板遗留的 MQTT SSL 示例测试，不适用于当前智能家居业务的串口验收。
 
 厂商组件的许可证保留在各自目录中。
+
+视频与 CAN 同时运行的 ISO-TP 修订、诊断字段及上板检查方法见 [ISO-TP 联调记录](verification/2026-10-28-isotp/检查结果.md)。
